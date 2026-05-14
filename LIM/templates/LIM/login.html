@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/LFSF/css/reset.css">
-    <link rel="stylesheet" href="../static/LFSF/css/login.css">
+    <link rel="stylesheet" href="../static/LIM/css/reset.css">
+    <link rel="stylesheet" href="../static/LIM/css/login.css">
     <title>ログイン</title>
 </head>
 
@@ -21,9 +21,9 @@
             {% providers_media_js %}
             <div class="social-login">
                 {% for provider in socialaccount_providers %}
-                    <a href="{% provider_login_url provider.id %}" class="social-button {{ provider.id }}">
-                        {{ provider.name }}でログイン
-                    </a>
+                <a href="{% provider_login_url provider.id %}" class="social-button {{ provider.id }}">
+                    {{ provider.name }}でログイン
+                </a>
                 {% endfor %}
             </div>
         </div>
