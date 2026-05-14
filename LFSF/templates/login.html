@@ -13,9 +13,21 @@
 
 <body>
     <header>
-        <h1>落とし物検索システム</h1>
+        <h1>紛失物報告フォーム</h1>
     </header>
-
+    <main>
+        <div class="login-container">
+            <h2>ログイン</h2>
+            {% providers_media_js %}
+            <div class="social-login">
+                {% for provider in socialaccount_providers %}
+                    <a href="{% provider_login_url provider.id %}" class="social-button {{ provider.id }}">
+                        {{ provider.name }}でログイン
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
